@@ -9,7 +9,7 @@ namespace GameOfLife
 {
     public class LifeBoard
     {
-        bool[,] Grid = new bool[,] { { true, false }, { false, true } };
+        bool[,] Grid;
         
         public int Rows = 10;
         public int Columns = 10;
@@ -21,9 +21,9 @@ namespace GameOfLife
 
         public void PrintBoard()
         {
-            for (int b = 1; b < Rows; b++)
+            for (int b = 0; b < Rows; b++)
             {
-                for (int e = 1; e < Columns; e++)
+                for (int e = 2; e < Columns; e++)
                 {
                     Console.Write(Grid[b, e]);
                 }

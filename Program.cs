@@ -1,4 +1,6 @@
-﻿namespace GameOfLife
+﻿using System.Linq.Expressions;
+
+namespace GameOfLife
 {
     internal class Program
     {
@@ -19,6 +21,20 @@
             LifeBoard clearBoard = new LifeBoard();
 
             clearBoard.ClearBoard();
+
+            //var choices
+            //switch (choices)
+            //{
+            //    case value1:
+            //        // Code to execute if expression equals value1
+            //        break;
+            //    case value2:
+            //        // Code to execute if expression equals value2
+            //        break;
+            //    default:
+            //        // Code to execute if no case matches
+            //        break;
+            //}
         }
     }
 }
