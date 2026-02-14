@@ -25,14 +25,14 @@ namespace GameOfLife
             //var choices
             //switch (choices)
             //{
-            //    case value1:
-            //        // Code to execute if expression equals value1
+            //    case print:
+            //      
             //        break;
-            //    case value2:
-            //        // Code to execute if expression equals value2
+            //    case clear:
+            //      
             //        break;
             //    default:
-            //        // Code to execute if no case matches
+            //      
             //        break;
             //}
         }

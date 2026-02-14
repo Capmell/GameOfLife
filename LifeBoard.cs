@@ -12,15 +12,19 @@ namespace GameOfLife
         bool[,] Grid;
         
         public int Rows = 10;
+
         public int Columns = 10;
 
         public LifeBoard()
         {
+
             Grid = new bool[Rows, Columns];
+
         }
 
         public void PrintBoard()
         {
+
             for (int b = 0; b < Rows; b++)
             {
                 for (int e = 2; e < Columns; e++)
@@ -29,12 +33,14 @@ namespace GameOfLife
                 }
                 Console.WriteLine();
             }
+
         }
 
         public void ClearBoard()
         {
 
             Console.Clear();
+
         }
 
         public void CountBoard()
@@ -43,7 +49,7 @@ namespace GameOfLife
             totalCount++;
 
             foreach (var rows in Grid)
-          foreach (var col in Grid)
+          foreach (var columns in Grid)
 
            
             Console.WriteLine(totalCount);
