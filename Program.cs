@@ -10,11 +10,15 @@ namespace GameOfLife
 
             printBoard.PrintBoard();
 
+            Console.WriteLine("Press any key to continue");
+
             Console.ReadLine();
             
             LifeBoard countBoard = new LifeBoard();
 
             countBoard.CountBoard();
+
+            Console.WriteLine("Press any key to continue");
 
             Console.ReadLine();
 

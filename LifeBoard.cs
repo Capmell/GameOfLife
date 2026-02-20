@@ -53,12 +53,16 @@ namespace GameOfLife
         {
             
             CellCount = Grid.GetLength(0);
+            
+          
 
           //  foreach (var rows in Grid)
           //foreach (var columns in Grid)
 
            
             Console.WriteLine(CellCount);
+            Console.WriteLine(Rows);
+            Console.WriteLine(Columns);
 
         }
 
