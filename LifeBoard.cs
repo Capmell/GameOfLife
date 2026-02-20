@@ -9,16 +9,22 @@ namespace GameOfLife
 {
     public class LifeBoard
     {
-        bool[,] Grid;
+        int[,] Grid;
         
         public int Rows = 10;
 
         public int Columns = 10;
 
+        int CellCount;
+
+        
+
         public LifeBoard()
         {
 
-            Grid = new bool[Rows, Columns];
+            Grid = new int[Rows, Columns];
+
+            CellCount = 0;
 
         }
 
@@ -45,14 +51,14 @@ namespace GameOfLife
 
         public void CountBoard()
         {
-            int totalCount = 0 + 1;
-            totalCount++;
+            
+            CellCount = Grid.GetLength(0);
 
-            foreach (var rows in Grid)
-          foreach (var columns in Grid)
+          //  foreach (var rows in Grid)
+          //foreach (var columns in Grid)
 
            
-            Console.WriteLine(totalCount);
+            Console.WriteLine(CellCount);
 
         }
 
