@@ -57,6 +57,13 @@ namespace GameOfLife
         {
             // this should set the grid to false hopefully deleting it then i put a console.clear to completely clean the console
             //Grid[Rows, Columns] = false;
+
+            // also tried this statement below thats commented it supposedly cleans out both the console and any leftover memory of the info stored but I could not get it to work the way I wanted to
+
+            //Console.Clear();
+            //Console.WriteLine("\x1b[3J");
+
+
             Console.Clear();
 
             for (int b = 0; b < Rows; b++)
