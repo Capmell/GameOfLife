@@ -6,25 +6,53 @@ namespace GameOfLife
     {
         static void Main(string[] args)
         {
+            //GOAL clean up code at some point so its not as long
             LifeBoard printBoard = new LifeBoard();
 
             printBoard.PrintBoard();
 
-            Console.WriteLine("Press any key to continue");
+   
 
-            Console.ReadLine();
-            
+           LifeBoard nextinput = new LifeBoard();
+
+            nextinput.NextInput();
+
             LifeBoard countBoard = new LifeBoard();
 
             countBoard.CountBoard();
 
-            Console.WriteLine("Press any key to continue");
+           
 
-            Console.ReadLine();
+            LifeBoard nextinput2 = new LifeBoard();
+
+            nextinput.NextInput();
 
             LifeBoard clearBoard = new LifeBoard();
 
             clearBoard.ClearBoard();
+
+            LifeBoard nextinput3 = new LifeBoard();
+
+            nextinput.NextInput();
+
+            LifeBoard printBoard2 = new LifeBoard();
+
+            printBoard.PrintBoard();
+
+          
+
+            LifeBoard nextinput4 = new LifeBoard();
+
+            nextinput.NextInput();
+
+
+            LifeBoard clearBoard2 = new LifeBoard();
+
+            clearBoard.ClearBoard();
+
+            LifeBoard nextinput5 = new LifeBoard();
+
+            nextinput.NextInput();
 
             //var choices
             //switch (choices)
