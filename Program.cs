@@ -6,20 +6,31 @@ namespace GameOfLife
     {
         static void Main(string[] args)
         {
+            // i need to change some things for sure is there anything that stands out to you?
             //GOAL clean up code at some point so its not as long
             LifeBoard printBoard = new LifeBoard();
 
             printBoard.PrintBoard();
 
-   
+          
 
-           LifeBoard nextinput = new LifeBoard();
+
+
+            LifeBoard nextinput = new LifeBoard();
 
             nextinput.NextInput();
 
             LifeBoard countBoard = new LifeBoard();
 
-            countBoard.CountBoard();
+            countBoard.CountAliveNeighbors();
+
+            LifeBoard nextinput3 = new LifeBoard();
+
+            nextinput.NextInput();
+
+            LifeBoard advance = new LifeBoard();
+
+            advance.AdvanceGeneration();
 
            
 
@@ -31,7 +42,7 @@ namespace GameOfLife
 
             clearBoard.ClearBoard();
 
-            LifeBoard nextinput3 = new LifeBoard();
+            LifeBoard nextinput4 = new LifeBoard();
 
             nextinput.NextInput();
 
@@ -39,9 +50,21 @@ namespace GameOfLife
 
             printBoard.PrintBoard();
 
-          
+            LifeBoard countBoard2 = new LifeBoard();
 
-            LifeBoard nextinput4 = new LifeBoard();
+            countBoard.CountAliveNeighbors();
+
+            LifeBoard nextinput7 = new LifeBoard();
+
+            nextinput.NextInput();
+
+            LifeBoard advance2 = new LifeBoard();
+
+            advance.AdvanceGeneration();
+
+
+
+            LifeBoard nextinput5 = new LifeBoard();
 
             nextinput.NextInput();
 
@@ -50,7 +73,7 @@ namespace GameOfLife
 
             clearBoard.ClearBoard();
 
-            LifeBoard nextinput5 = new LifeBoard();
+            LifeBoard nextinput6 = new LifeBoard();
 
             nextinput.NextInput();
 

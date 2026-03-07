@@ -21,7 +21,11 @@ namespace GameOfLife
 
         int CellCount;
 
-        
+        int r;
+        int c;
+
+
+
 
         public LifeBoard()
         {
@@ -89,22 +93,105 @@ namespace GameOfLife
             Console.ReadLine();
         }
 
-        public void CountBoard()
+        public int CountAliveNeighbors()
         {
-            
-            CellCount = Grid.GetLength(0);
-            
-          
+            int count = 0;
 
-          //  foreach (var rows in Grid)
-          //foreach (var columns in Grid)
+     
+            for (int r = -1; r <= 1; r++)
+            {
+                for (int c = -1; c <= 1; c++)
+                {
 
-           
-            Console.WriteLine(CellCount);
-            Console.WriteLine(Rows);
-            Console.WriteLine(Columns);
+                    if (r == 10 && c == 10) ;
 
+                    int neighborRow = Rows + r;
+                    int neighborCol = Columns + c;
+
+                  
+                    if (neighborRow >= 0 && neighborRow < Rows &&
+                        neighborCol >= 0 && neighborCol < Columns)
+                    {
+                        if (Grid[neighborRow, neighborCol])
+                        {
+                            Grid[r, c] = true;
+                            count++;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine(count);
+            return count;
+         
         }
 
+        // might need to tweak the code here im not sure
+        public void AdvanceGeneration()
+        {
+    bool[,] nextGeneration = new bool[Rows, Columns];
+
+    for (int r = 0; r < Rows; r++)
+    {
+        for (int c = 0; c < Columns; c++)
+        {
+            int neighbors = CountAliveNeighbors2(r, c);
+            bool isAlive = Grid[r, c];
+
+            // Apply Conway's Rules
+            if (isAlive && (neighbors == 2 || neighbors == 3))
+            {
+                nextGeneration[r, c] = true; 
+            }
+            else if (!isAlive && neighbors == 3)
+            {
+                nextGeneration[r, c] = true; 
+            }
+            else
+            {
+                nextGeneration[r, c] = false; 
+            }
+
+          
+                    Console.WriteLine(neighbors);
+                    Console.WriteLine(isAlive);
+                }
+    }
+
+
+    Grid = nextGeneration;
+
+           
+}
+        // this extra was made simply because of could not implement COuntALiveNeighbors twice so I made a dulplicate 
+        private int CountAliveNeighbors2(int r, int c)
+        {
+            int count = 0;
+
+
+            for (int t = -1; t <= 1; t++)
+            {
+                for (int d = -1; d <= 1; d++)
+                {
+
+                    if (t == 10 && d == 10) ;
+
+                    int neighborRow = r + t;
+                    int neighborCol = c + d;
+
+
+                    if (neighborRow >= 0 && neighborRow < Rows &&
+                        neighborCol >= 0 && neighborCol < Columns)
+                    {
+                        if (Grid[neighborRow, neighborCol])
+                        {
+                            Grid[r, c] = true;
+                            count++;
+                        }
+                    }
+                }
+            }
+        
+            return count;
+        }
     }
 }
