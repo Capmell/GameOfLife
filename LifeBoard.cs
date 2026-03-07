@@ -126,7 +126,7 @@ namespace GameOfLife
         }
 
         // might need to tweak the code here im not sure
-        public void AdvanceGeneration()
+        public void Rules()
         {
     bool[,] nextGeneration = new bool[Rows, Columns];
 
@@ -134,7 +134,7 @@ namespace GameOfLife
     {
         for (int c = 0; c < Columns; c++)
         {
-            int neighbors = CountAliveNeighbors2(r, c);
+            int neighbors = CoubtAliveNeighborsNonDIsplay(r, c);
             bool isAlive = Grid[r, c];
 
             // Apply Conway's Rules
@@ -154,16 +154,16 @@ namespace GameOfLife
           
                     Console.WriteLine(neighbors);
                     Console.WriteLine(isAlive);
-                }
+        }
     }
 
 
-    Grid = nextGeneration;
+                  Grid = nextGeneration;
 
            
 }
         // this extra was made simply because of could not implement COuntALiveNeighbors twice so I made a dulplicate 
-        private int CountAliveNeighbors2(int r, int c)
+        private int CoubtAliveNeighborsNonDIsplay(int r, int c)
         {
             int count = 0;
 

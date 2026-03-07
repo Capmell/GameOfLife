@@ -30,7 +30,7 @@ namespace GameOfLife
 
             LifeBoard advance = new LifeBoard();
 
-            advance.AdvanceGeneration();
+            advance.Rules();
 
            
 
@@ -60,7 +60,7 @@ namespace GameOfLife
 
             LifeBoard advance2 = new LifeBoard();
 
-            advance.AdvanceGeneration();
+            advance.Rules();
 
 
 
