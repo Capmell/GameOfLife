@@ -103,20 +103,23 @@ namespace GameOfLife
                 for (int c = -1; c <= 1; c++)
                 {
 
-                    if (r == 10 && c == 10) ;
-
-                    int neighborRow = Rows + r;
-                    int neighborCol = Columns + c;
-
-                  
-                    if (neighborRow >= 0 && neighborRow < Rows &&
-                        neighborCol >= 0 && neighborCol < Columns)
+                    if (r == 10 && c == 10)
                     {
-                        if (Grid[neighborRow, neighborCol])
+
+                        int neighborRow = Rows + r;
+                        int neighborCol = Columns + c;
+
+
+                        if (neighborRow >= 0 && neighborRow < Rows &&
+                            neighborCol >= 0 && neighborCol < Columns)
                         {
-                            Grid[r, c] = true;
-                            count++;
+                            if (Grid[neighborRow, neighborCol])
+                            {
+                                Grid[r, c] = true;
+                                count++;
+                            }
                         }
+
                     }
                 }
             }
@@ -173,20 +176,23 @@ namespace GameOfLife
                 for (int d = -1; d <= 1; d++)
                 {
 
-                    if (t == 10 && d == 10) ;
-
-                    int neighborRow = r + t;
-                    int neighborCol = c + d;
-
-
-                    if (neighborRow >= 0 && neighborRow < Rows &&
-                        neighborCol >= 0 && neighborCol < Columns)
+                    if (t == 10 && d == 10)
                     {
-                        if (Grid[neighborRow, neighborCol])
+
+                        int neighborRow = r + t;
+                        int neighborCol = c + d;
+
+
+                        if (neighborRow >= 0 && neighborRow < Rows &&
+                            neighborCol >= 0 && neighborCol < Columns)
                         {
-                            Grid[r, c] = true;
-                            count++;
+                            if (Grid[neighborRow, neighborCol])
+                            {
+                                Grid[r, c] = true;
+                                count++;
+                            }
                         }
+
                     }
                 }
             }
